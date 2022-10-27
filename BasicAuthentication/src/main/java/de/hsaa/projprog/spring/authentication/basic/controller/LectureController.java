@@ -2,7 +2,6 @@ package de.hsaa.projprog.spring.authentication.basic.controller;
 
 import de.hsaa.projprog.spring.authentication.basic.model.Lecture;
 import de.hsaa.projprog.spring.authentication.basic.service.LectureService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +21,6 @@ public class LectureController {
 
     @GetMapping()
     public ResponseEntity<Collection<Lecture>> getAllLecture() {
-        return new ResponseEntity(lectureService.getAllLectures(), HttpStatus.OK);
+        return new ResponseEntity<>(lectureService.getAllLectures(), HttpStatus.OK);
     }
 }
